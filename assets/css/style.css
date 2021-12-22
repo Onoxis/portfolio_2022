@@ -80,7 +80,8 @@ h1, h2, h3, h4, h5, h6 {
   border: 8px solid #2c2f3f;
 }
 #header .profile h1 {
-  font-size: 24px;
+  padding-top: 20px;
+  font-size: 3rem;
   margin: 0;
   padding: 0;
   font-weight: 600;
@@ -111,7 +112,9 @@ h1, h2, h3, h4, h5, h6 {
   color: #fff;
   text-decoration: none;
 }
-
+.profile {
+  margin-top: 15px;
+}
 #main {
   margin-left: 300px;
 }
@@ -197,28 +200,35 @@ h1, h2, h3, h4, h5, h6 {
 --------------------------------------------------------------*/
 #hero {
   width: 100%;
-  height: 100vh;
-  background: url("../img/sur_main.jpg") top center;
+  height: 70vh;
+  background: url("../img/portfolio_main.png") top center;
   background-size: cover;
 }
 #hero:before {
   content: "";
-  background: rgba(5, 13, 24, 0.3);
+  background: rgba(5, 13, 24, 0.494);
   position: absolute;
   bottom: 0;
   top: 0;
   left: 0;
   right: 0;
   z-index: 1;
+  height: 70vh;
 }
 #hero .hero-container {
-  position: relative;
+  position: absolute;
+  right: 5vh;
+  top: 5vh;
   z-index: 2;
   min-width: 300px;
 }
+.hero-container {
+  text-align: left;
+}
 #hero h1 {
   margin: 0 0 10px 0;
-  font-size: 64px;
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 2.5rem;
   font-weight: 700;
   line-height: 56px;
   color: #fff;
@@ -226,11 +236,12 @@ h1, h2, h3, h4, h5, h6 {
 #hero p {
   color: #fff;
   margin-bottom: 50px;
-  font-size: 26px;
+  font-size: 1.2rem;
   font-family: "Poppins", sans-serif;
+  padding-left: 5px;
 }
 #hero p span {
-  color: #fff;
+  color: rgb(216, 192, 53);
   padding-bottom: 4px;
   letter-spacing: 1px;
   border-bottom: 3px solid #149ddd;
@@ -251,6 +262,14 @@ h1, h2, h3, h4, h5, h6 {
     margin-bottom: 30px;
   }
 }
+@media (max-width: 480px) {
+  #hero:before {
+    height: 50vh;
+  }
+  #hero {
+    height: 50vh;
+  }
+  }
 
 /*--------------------------------------------------------------
 # Sections General
@@ -268,6 +287,7 @@ section {
   padding-bottom: 30px;
 }
 .section-title h2 {
+  margin-top: 3vh;
   font-size: 32px;
   font-weight: bold;
   margin-bottom: 20px;
@@ -287,6 +307,12 @@ section {
 }
 .section-title p {
   margin-bottom: 0;
+}
+
+@media (max-width: 480px){
+  #about .img-fluid {
+    max-width: 33vw;
+  }
 }
 
 /*--------------------------------------------------------------
